@@ -2,7 +2,7 @@ package jobs
 
 import (
 	"fmt"
-	"github.com/revel/revel"
+	"github.com/nubleer/revel"
 	"github.com/robfig/cron"
 )
 

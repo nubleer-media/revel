@@ -289,7 +289,10 @@ func findControllers(appControllerType reflect.Type) (indexes [][]int) {
 			elem     = node.val
 			elemType = elem.Type()
 		)
+
+		INFO.Print("Dentro ", queue)
 		if elemType.Kind() == reflect.Ptr {
+			INFO.Print("elemType %#v", elemType)
 			elem = elem.Elem()
 			elemType = elem.Type()
 		}

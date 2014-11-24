@@ -4,9 +4,9 @@ import (
 	"net/url"
 	"path"
 
-	"github.com/revel/revel/samples/upload/app/routes"
+	"github.com/nubleer/revel/samples/upload/app/routes"
 
-	"github.com/revel/revel"
+	"github.com/nubleer/revel"
 )
 
 // MultipleTest is a test suite of Multiple controller.

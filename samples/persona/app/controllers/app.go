@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/revel/revel"
+	"github.com/nubleer/revel"
 )
 
 type App struct {

@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/revel/revel"
-	"github.com/revel/revel/samples/validation/app/models"
+	"github.com/nubleer/revel"
+	"github.com/nubleer/revel/samples/validation/app/models"
 )
 
 type Sample4 struct {

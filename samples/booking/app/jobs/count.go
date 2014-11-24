@@ -2,10 +2,10 @@ package jobs
 
 import (
 	"fmt"
-	"github.com/revel/revel"
-	"github.com/revel/revel/modules/jobs/app/jobs"
-	"github.com/revel/revel/samples/booking/app/controllers"
-	"github.com/revel/revel/samples/booking/app/models"
+	"github.com/nubleer/revel"
+	"github.com/nubleer/revel/modules/jobs/app/jobs"
+	"github.com/nubleer/revel/samples/booking/app/controllers"
+	"github.com/nubleer/revel/samples/booking/app/models"
 )
 
 // Periodically count the bookings in the database.
