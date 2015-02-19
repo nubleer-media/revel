@@ -280,6 +280,7 @@ func findControllers(appControllerType reflect.Type) (indexes [][]int) {
 		val   reflect.Value
 		index []int
 	}
+
 	appControllerPtr := reflect.New(appControllerType)
 	queue := []nodeType{{appControllerPtr, []int{}}}
 	for len(queue) > 0 {
@@ -290,9 +291,7 @@ func findControllers(appControllerType reflect.Type) (indexes [][]int) {
 			elemType = elem.Type()
 		)
 
-		INFO.Print("Dentro ", queue)
 		if elemType.Kind() == reflect.Ptr {
-			INFO.Print("elemType %#v", elemType)
 			elem = elem.Elem()
 			elemType = elem.Type()
 		}

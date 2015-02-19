@@ -2,11 +2,12 @@ package revel
 
 import (
 	"fmt"
-	"github.com/robfig/config"
 	"os"
 	"path/filepath"
 	"regexp"
 	"strings"
+
+	"github.com/robfig/config"
 )
 
 const (
@@ -146,7 +147,8 @@ func I18nFilter(c *Controller, fc []Filter) {
 		TRACE.Printf("Found locale cookie value: %s", cookieValue)
 		setCurrentLocaleControllerArguments(c, cookieValue)
 	} else if foundHeader, headerValue := hasAcceptLanguageHeader(c.Request); foundHeader {
-		TRACE.Printf("Found Accept-Language header value: %s", headerValue)
+		// TODO: Uncomment when use language
+		//TRACE.Printf("Found Accept-Language header value: %s", headerValue)
 		setCurrentLocaleControllerArguments(c, headerValue)
 	} else {
 		TRACE.Println("Unable to find locale in cookie or header, using empty string")
@@ -180,7 +182,8 @@ func hasLocaleCookie(request *Request) (bool, string) {
 		if cookie, error := request.Cookie(name); error == nil {
 			return true, cookie.Value
 		} else {
-			TRACE.Printf("Unable to read locale cookie with name '%s': %s", name, error.Error())
+			// TODO: Uncomment when add cookies to nubleer
+			//	TRACE.Printf("Unable to read locale cookie with name '%s': %s", name, error.Error())
 		}
 	}
 
