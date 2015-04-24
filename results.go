@@ -204,7 +204,7 @@ type RenderJsonResult struct {
 }
 
 func (r RenderJsonResult) Apply(req *Request, resp *Response) {
-	fmt.Println("RenderJsonResult modified")
+
 	var b []byte
 	var err error
 	if Config.BoolDefault("results.pretty", false) {
@@ -219,7 +219,6 @@ func (r RenderJsonResult) Apply(req *Request, resp *Response) {
 	}
 
 	if r.callback == "" {
-		resp.Out.Header().Set("Content-Length", fmt.Sprintf("%v", len(b)))
 		resp.WriteHeader(http.StatusOK, "application/json; charset=utf-8")
 		resp.Out.Write(b)
 		return
